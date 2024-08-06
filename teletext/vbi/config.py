@@ -98,6 +98,14 @@ class Config(object):
             'field_lines': 16,
             'field_range': range(0, 16),
         },
+        'cx23885_pal_dk': {
+            'sample_rate': 27000000.0,
+            'line_length': 1440,
+            'line_start_range': (1,314),
+            'dtype': np.uint32,
+            'field_lines': 18,
+            'field_range': range(1, 17)
+        }
     }
 
     def __init__(self, card='bt8x8', **kwargs):
