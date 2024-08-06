@@ -473,7 +473,7 @@ def record(output, device, config):
     if output.name.startswith('/dev/vbi'):
         raise click.UsageError(f'Refusing to write output to VBI device. Did you mean -d?')
 
-    chunks = FileChunker(device, config.line_length*config.field_lines*2,0,None,1,None,config.field_lines,config.frange)
+    chunks = FileChunker(device, config.line_length*config.field_lines*2,0,None,1,None,config.field_lines,config.field_range)
     bar = tqdm(chunks, unit=' Frames')
 
     prev_seq = None
